@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    height: 65px;
+    width: 100vw;
+    background-color: black;
+    margin: -8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    filter: invert(1);
+    height: 32px;
+    width: 32px;
+    padding: 12px;
+}
+.homeIcon button{
+    border: none;
+    filter: invert(1);
+    height: 24px;
+    width: 24px;
+}
+.homeIcon{
+    border-radius: 50px;
+    background-color: #1f1f1f;
+    height: 24px;
+    width: 24px;
+    margin: 0px 0px 0px 8px;
+    padding: 12px;
+    align-items: center;
+}
