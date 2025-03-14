@@ -17,7 +17,7 @@ button:hover{
     padding: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
 }
 .logo{
     filter: invert(1);
@@ -161,18 +161,21 @@ button:hover{
 
 .main{
     background-color: black;
+    width: 100vw;
+    padding: 5px;
 }
 
 .left{
     background-color: #141414;
-    width: 25%;
-    height: 100%;
+    width: 30%;
+    height: 100vh;
     border-radius: 10px;
     padding: 12px 16px 8px;
 }
 .library{
     font-size: 16px;
-    height: 40px;
+    height: 32px;
+    padding: 12px 16px 8px;
     display: flex;
     align-items: center;
 }
@@ -197,7 +200,7 @@ button:hover{
     padding: 4px;
     align-items: end;
     justify-content: end;
-    margin-left: 175px;
+    margin-left: 225px;
 }
 .plus_icon button{
     border: none;
@@ -205,4 +208,64 @@ button:hover{
 }
 .plus_icon button:hover{
     font-size: 20px;
+}
+.playlist{
+    width: 400px;
+    height: 115px;
+    margin: 8px 0px;
+    padding: 16px 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+.playlist h2{
+    font-size: 16px;
+}
+.playlist h3{
+    font-size: 14px;
+    margin-top: 8px;
+}
+.playlist button{
+    font-size: 14px;
+    font-weight: 700;
+    height: 32px;
+    width: 125px;
+    color: black;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    padding: 4px 16px;
+    margin-top: 32px;
+}
+.podcast{
+    width: 400px;
+    height: 115px;
+    margin: 8px 0px;
+    padding: 16px 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+.podcast h2{
+    font-size: 16px;
+}
+.podcast h3{
+    font-size: 14px;
+    margin-top: 8px;
+}
+.podcast button{
+    font-size: 14px;
+    font-weight: 700;
+    height: 32px;
+    width: 145px;
+    color: black;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: none;
+    padding: 4px 16px;
+    margin-top: 32px;
 }
