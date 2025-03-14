@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+button:hover{
+    cursor: pointer;
+    font-size: 16px;
 }
 .navbar{
     height: 65px;
@@ -10,6 +17,7 @@
     padding: 8px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 .logo{
     filter: invert(1);
@@ -79,7 +87,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 300px;
+    margin-left: 150px;
     height: 48px;
 }
 .psd1{
@@ -89,7 +97,112 @@
     height: 48px;
     width: 48px;
     margin-left: 15px;
+    padding: 6px 0px;
+    border: none;
+    background-color: black;
+}
+.line{
+    color: white;
+    font-size: 36px;
+    margin: 40px;
+    align-items: center;
+}
+.install{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.install_icon{
+    height: 16px;
+    width: 16px;
+    filter: invert(1);
+}
+.install_icon button{
+    width: 16px;
+    border: none;
+}
+.installApp button{
+    color: #b3b3b3;
+    font: 16px;
+    font-weight: 700;
+    height: 48px;
+    width: 100%;
+    margin-left: 5px;
     padding: 8px 0px;
     border: none;
     background-color: black;
+}
+
+.sign_up{
+    align-items: center;
+}
+.sign_up button{
+    color: #b3b3b3;
+    font: 16px;
+    font-weight: 700;
+    height: 48px;
+    width: 100%;
+    margin-left: 16px;
+    padding: 8px 0px;
+    border: none;
+    background-color: black;
+}
+.login button{
+    color: black;
+    background: #ffffff;
+    font-size: 16px;
+    height: 48px;
+    width: 110px;
+    padding: 4px 16px;
+    border-radius: 50px;
+    border: none;
+    margin-left: 16px;
+}
+
+.main{
+    background-color: black;
+}
+
+.left{
+    background-color: #141414;
+    width: 25%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 12px 16px 8px;
+}
+.library{
+    font-size: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.file_icon button{
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+    border: none;
+}
+.urlibrary{
+    font-size: 16px;
+    color: #b3b3b3;
+    font-weight: 700;
+    padding: 4px 8px;
+}
+
+.plus_icon{
+    filter: invert(1);
+    font-size: 16px;
+    height: 32px;
+    width: 32px;
+    padding: 4px;
+    align-items: end;
+    justify-content: end;
+    margin-left: 175px;
+}
+.plus_icon button{
+    border: none;
+    font-size: 19px;
+}
+.plus_icon button:hover{
+    font-size: 20px;
 }
