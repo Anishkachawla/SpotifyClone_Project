@@ -5,10 +5,16 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 button:hover{
     cursor: pointer;
     font-size: 16px;
 }
+
 .navbar{
     height: 65px;
     width: 100vw;
@@ -132,7 +138,6 @@ button:hover{
     border: none;
     background-color: black;
 }
-
 .sign_up{
     align-items: center;
 }
@@ -277,6 +282,7 @@ button:hover{
     padding: 4px 0px 0px;
     border-radius: 10px;
     background-color: #141414;
+    position: relative;
 }
 .Splaylists{
     padding: 18px 18px;
@@ -326,7 +332,7 @@ button:hover{
     justify-content: center;
     position: absolute;
     top: 85px;
-    right: 5px;
+    right: 10px;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
@@ -338,4 +344,21 @@ button:hover{
     }
     background-color: #1f1f1f;
     cursor: pointer;
+}
+
+.playbar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1ED760;
+    height: 40px;
+}
+.songbuttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 300px;
+    gap: 30px;
+    height: 40px;
+    font-size: 22px;
 }
