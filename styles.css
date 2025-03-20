@@ -290,6 +290,7 @@ button:hover{
 .card{
     width: 140px;
     margin-top: 16px;
+    padding: 6px;
     position: relative;
 }
 .card h2{
@@ -327,10 +328,14 @@ button:hover{
     top: 85px;
     right: 5px;
     opacity: 0;
-    transition: all 0.5s;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
 }
 .card:hover{
     .play{
         opacity: 1;
+        transform: translateY(0);
     }
+    background-color: #1f1f1f;
+    cursor: pointer;
 }
