@@ -6,9 +6,14 @@
     font-family: 'Roboto', sans-serif;
 }
 html, body{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: black;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 button:hover{
     cursor: pointer;
@@ -19,7 +24,10 @@ button:hover{
     height: 65px;
     width: 100vw;
     background-color: black;
-    margin: -8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     padding: 8px;
     display: flex;
     align-items: center;
@@ -93,7 +101,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 150px;
+    margin-left: 250px;
     height: 48px;
 }
 .psd1{
@@ -166,10 +174,13 @@ button:hover{
 
 .main{
     background-color: black;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     padding: 5px;
+    padding-bottom: 80px;
     display: flex;
     justify-content: space-around;
+    margin-top: 65px;
 }
 
 .left{
@@ -216,8 +227,8 @@ button:hover{
     font-size: 20px;
 }
 .playlist{
-    width: 350px;
-    height: 105px;
+    width: 90%;
+    height: 80%;
     margin: 8px 0px;
     padding: 16px 20px;
     background-color: #1f1f1f;
@@ -227,54 +238,9 @@ button:hover{
     justify-content: space-between;
 }
 .playlist h2{
-    font-size: 16px;
+    font-size: 20px;
 }
-.playlist h3{
-    font-size: 14px;
-    margin-top: 8px;
-}
-.playlist button{
-    font-size: 14px;
-    font-weight: 700;
-    height: 32px;
-    width: 125px;
-    color: black;
-    background-color: #ffffff;
-    border-radius: 15px;
-    border: none;
-    padding: 4px 16px;
-    margin-top: 32px;
-}
-.podcast{
-    width: 350px;
-    height: 105px;
-    margin: 8px 0px;
-    padding: 16px 20px;
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-    justify-content: space-between;
-}
-.podcast h2{
-    font-size: 16px;
-}
-.podcast h3{
-    font-size: 14px;
-    margin-top: 8px;
-}
-.podcast button{
-    font-size: 14px;
-    font-weight: 700;
-    height: 32px;
-    width: 145px;
-    color: black;
-    background-color: #ffffff;
-    border-radius: 15px;
-    border: none;
-    padding: 4px 16px;
-    margin-top: 32px;
-}
+
 
 .right{
     height: 100vh;
@@ -349,16 +315,111 @@ button:hover{
 .playbar{
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
+    height: 50px;
     background-color: #1ED760;
-    height: 40px;
-}
-.songbuttons{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 300px;
-    gap: 30px;
-    height: 40px;
-    font-size: 22px;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.songinfo {
+    font-size: 16px;
+    font-weight: bold;
+}
+.songbuttons i {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.songtimer {
+    font-size: 14px;
+}
+
+
+#songList {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+#songList li:hover {
+    background-color: #1db954;
+    color: white;
+}
+
+
+
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+
+    .playlist {
+        height: auto;
+    }
+
+    .cardContainer {
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+
+    .searchBar {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    .psd, .install, .sign_up, .login {
+        display: none; /* You can hide or collapse nav items */
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .left, .right {
+        padding: 8px;
+    }
+
+    .playbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .songbuttons i {
+        font-size: 24px;
+    }
+
+    .songinfo, .songtimer {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 8px;
+    }
 }
