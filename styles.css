@@ -279,6 +279,7 @@ button:hover{
 }
 .card img{
     width: 100%;
+    /* height: 140px; */
     object-fit: contain;
     border-radius: 5px;
 }
@@ -321,17 +322,59 @@ button:hover{
     background-color: #1ED760;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 1000;
 }
 .songinfo {
     font-size: 16px;
     font-weight: bold;
+    margin-right: 250px;
 }
 .songbuttons i {
     margin: 0 10px;
     cursor: pointer;
     font-size: 20px;
+}
+.volume-controls{
+    margin-left: 250px;
+    display: flex;
+    align-items: center;
+}
+.volume-controls button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.volume-controls input[type="range"] {
+    width: 80px;
+    height: 5px;
+    -webkit-appearance: none;
+    background: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.volume-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: black; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.volume-controls input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
 }
 .songtimer {
     font-size: 14px;

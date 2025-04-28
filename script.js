@@ -4,6 +4,10 @@ let currentSongIndex = 0;
 const audio = new Audio();
 const songInfo = document.querySelector(".songinfo");
 const playbutton = document.querySelector(".songbuttons i.fa-play, .songbuttons i.fa-pause");
+const volumeDownBtn = document.querySelector('.volume-down-btn');
+const volumeUpBtn = document.querySelector('.volume-up-btn');
+const volumeSlider = document.getElementById('volume-slider');
+
 
 let isPlaying = false;
 
@@ -79,4 +83,25 @@ function updatePlayButton() {
         playbutton.classList.remove("fa-pause");
         playbutton.classList.add("fa-play");
     }
+}
+
+// Volume Control
+if (volumeSlider) {
+    volumeSlider.addEventListener('input', function () {
+        audio.volume = this.value;
+    });
+
+    volumeDownBtn.addEventListener('click', function () {
+        if (audio.volume > 0) {
+            audio.volume -= 0.1;
+            volumeSlider.value = audio.volume;
+        }
+    });
+
+    volumeUpBtn.addEventListener('click', function () {
+        if (audio.volume < 1) {
+            audio.volume += 0.1;
+            volumeSlider.value = audio.volume;
+        }
+    });
 }
