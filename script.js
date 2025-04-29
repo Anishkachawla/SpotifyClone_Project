@@ -105,3 +105,24 @@ if (volumeSlider) {
         }
     });
 }
+
+
+function bindCardClickEvents() {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+        const songFile = card.getAttribute("data-song");
+
+        if (songFile) {
+            card.addEventListener("click", () => {
+                audio.src = `songs/${songFile}`;
+                audio.play();
+                isPlaying = true;
+                updatePlaybar(songFile);
+                updatePlayButton();
+            });
+        }
+    });
+}
+
+bindCardClickEvents();
