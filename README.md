@@ -1,7 +1,7 @@
 # SpotifyClone_Project
 A responsive Spotify-inspired music player built using HTML, CSS, and JavaScript. This project replicates core Spotify UI elements and includes dynamic functionality for audio playback and user interaction.
 <br/>
-🔑 Features
+Features
 <br/>
 🎵 Interactive playlist with clickable song cards.
 <br/>
